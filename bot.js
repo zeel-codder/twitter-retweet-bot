@@ -64,6 +64,6 @@ setInterval(function () { retweet('#60daysofdsa OR #100DaysOfCode OR #zeel11'); 
 // setInterval(function () { retweet('#zeel11'); }, 60000)
 
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
