@@ -11,6 +11,15 @@ const config = {
 
 }
 
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+
 const T = new twit(config)
 
 function retweet(searchText) {
@@ -53,3 +62,8 @@ function retweet(searchText) {
 // Run every 60 seconds
 setInterval(function () { retweet('#60daysofdsa OR #100DaysOfCode OR #zeel11'); }, 60000)
 // setInterval(function () { retweet('#zeel11'); }, 60000)
+
+
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+  })
