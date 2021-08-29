@@ -60,8 +60,9 @@ function retweet(searchText) {
 }
 
 // Run every 60 seconds
-setInterval(function () { retweet('#60daysofdsa OR #100DaysOfCode OR #zeel11'); }, 60000)
-// setInterval(function () { retweet('#zeel11'); }, 60000)
+setInterval(function () { retweet('#100DaysOfCode'); }, 600000)
+setInterval(function () { retweet('#60daysofdsa'); }, 600000/2)
+// setInterval(function () { retweet('#zeel11'); }, 600)
 
 
 app.listen(process.env.PORT || port, () => {
