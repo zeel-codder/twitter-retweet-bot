@@ -60,8 +60,8 @@ function retweet(searchText) {
 }
 
 // Run every 60 seconds
-setInterval(function () { retweet('#100DaysOfCode'); }, 600000)
-setInterval(function () { retweet('#60daysofdsa'); }, 600000/2)
+setInterval(function () { retweet('#100DaysOfCode'); }, 6000)
+setInterval(function () { retweet('#60daysofdsa'); }, 6000×2)
 // setInterval(function () { retweet('#zeel11'); }, 600)
 
 
