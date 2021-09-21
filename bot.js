@@ -43,17 +43,17 @@ function retweet(searchText) {
             for (let tweetID of tweetIDList) {
                 T.post('statuses/retweet/:id', { id: tweetID }, function (err_rt, data_rt, response_rt) {
                     if (!err_rt) {
-                        // console.log("\n\nRetweeted!)
+                        //// console.log("\n\nRetweeted!)
                     }
                     else {
-                        // console.log("\nError... Duplication maybe... " + tweetID)
-                        console.log("Error = " + err_rt)
+                        //// console.log("\nError... Duplication maybe... " + tweetID)
+                       // console.log("Error = " + err_rt)
                     }
                 })
             }
         }
         else {
-            console.log("Error while searching" + err_search)
+           // console.log("Error while searching" + err_search)
             process.exit(1)
         }
     })
@@ -61,12 +61,11 @@ function retweet(searchText) {
 
 // Run every 60 seconds
 
-// setInterval(function () { retweet('#100DaysOfCode'); }, 6000)
-setInterval(function () { retweet('#60daysofdsa'); }, 6000)
+setInterval(function () { retweet('#100DaysOfCode OR #60daysofdsa'); }, 600)
 
 // setInterval(function () { retweet('#zeel11'); }, 600)
 
 
 app.listen(process.env.PORT || port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
-  })
+   console.log(`Example app listening at http://localhost:${port}`)
+})
